@@ -92,7 +92,8 @@ public class TimelineActivity extends AppCompatActivity {
     private void queryPosts() {
         ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
         query.include(Post.KEY_USER);
-        query.orderByDescending("createdAt");
+        query.orderByDescending(Post.KEY_CREATED_AT);
+        query.setLimit(20);
         query.findInBackground(new FindCallback<Post>() {
             @Override
             public void done(List<Post> queryResult, ParseException e) {
