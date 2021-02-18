@@ -4,4 +4,10 @@
     <string name="name">Name</string>
     <string name="parstagram">Parstagram</string>
     <string name="logout">Logout</string>
+    <string name="text_home">Home</string>
+    <string name="text_schedules">add photo</string>
+    <string name="text_add_photo">add photo</string>
+    <string name="text_profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
