@@ -3,19 +3,19 @@ package com.example.parstagram;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
-import com.parse.ParseUser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +26,7 @@ public class TimelineActivity extends AppCompatActivity {
     RecyclerView rvPosts;
     List<Post> posts;
     PostsAdapter adapter;
+    BottomNavigationView bottomNavigationView;
 //    SwipeRefreshLayout swipeContainer;
 
     @Override
@@ -51,33 +52,6 @@ public class TimelineActivity extends AppCompatActivity {
         queryPosts();
     }
 
-    @Override
-
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle presses on the action bar items
-        switch (item.getItemId()) {
-            case R.id.miCompose:
-//                logout();
-                Log.i(TAG, "compose pressed");
-                goMainActivity();
-                return true;
-            case R.id.miLogout:
-                Log.i(TAG, "logout pressed");
-                Toast.makeText(TimelineActivity.this, "Logging out...", Toast.LENGTH_SHORT).show();
-                ParseUser.logOut();
-                goLoginActivity();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
 
     private void goMainActivity() {
         Intent i = new Intent(this, MainActivity.class);

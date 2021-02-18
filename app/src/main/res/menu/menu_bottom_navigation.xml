@@ -1,21 +1,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/action_home"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="@string/text_home"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_capture"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_add_a_photo_24"
+        android:title="@string/text_add_photo"
+        app:showAsAction="ifRoom" />
+    <item
         android:id="@+id/action_profile"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_person_24"
-        android:title="@string/text_favorites"
-        app:showAsAction="ifRoom" />
-    <item
-        android:id="@+id/action_timeline"
-        android:enabled="true"
-        android:icon="@drawable/ic_baseline_home_24"
-        android:title="@string/text_schedules"
-        app:showAsAction="ifRoom" />
-    <item
-        android:id="@+id/action_compose"
-        android:enabled="true"
-        android:icon="@drawable/ic_baseline_add_a_photo_24"
-        android:title="@string/text_music"
+        android:title="@string/text_profile"
         app:showAsAction="ifRoom" />
 </menu>
