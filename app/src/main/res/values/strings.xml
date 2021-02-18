@@ -4,4 +4,7 @@
     <string name="name">Name</string>
     <string name="parstagram">Parstagram</string>
     <string name="logout">Logout</string>
+    <string name="text_favorites" />
+    <string name="text_schedules" />
+    <string name="text_music" />
 </resources>
