@@ -52,11 +52,6 @@ public class PostsAdapter extends  RecyclerView.Adapter<PostsAdapter.ViewHolder>
         this.posts.clear();
     }
 
-//    @GlideModule
-//    public final class MyAppGlideModule extends AppGlideModule {
-//        // leave empty for now
-//    }
-
     // Define a viewholder
     public class ViewHolder extends RecyclerView.ViewHolder {
 
@@ -77,9 +72,6 @@ public class PostsAdapter extends  RecyclerView.Adapter<PostsAdapter.ViewHolder>
             if (post.getImage() != null) {
                 Glide.with(context).load(post.getImage().getUrl()).into(ivImagePost);
             }
-//            tvScreenName.setText(tweet.user.screenName);
-//            Glide.with(context).load(tweet.user.profileImageUrl).into(ivProfileImage);
-//            tvTimestamp.setText(Tweet.getFormattedTimestamp(tweet.createdAt));
         }
     }
 }
